@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.company'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(23)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'cn.hutool:hutool-all:5.8.33'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
