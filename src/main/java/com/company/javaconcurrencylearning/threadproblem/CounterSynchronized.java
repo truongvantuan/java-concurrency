@@ -6,13 +6,12 @@ public class CounterSynchronized implements ICounter {
 
     private long result;
 
-    public long incAndGet(long countTo) {
+    public void incTo(long countTo) {
         synchronized (this) {
             result = 0;
             for (long i = 0; i < countTo; i++) {
                 result++;
             }
-            return result;
         }
     }
 

@@ -2,7 +2,7 @@ package com.company.javaconcurrencylearning.threadproblem;
 
 import com.company.javaconcurrencylearning.utils.ICounter;
 
-public class RaceConditionExample {
+public class RaceConditionExample1 {
 
     public static void main(String[] args) {
 
@@ -20,7 +20,7 @@ public class RaceConditionExample {
 
         @Override
         public void run() {
-            iCounter.incAndGet(1_000_000);
+            iCounter.incTo(1_000_000);
             System.out.println(message + iCounter.get());
         }
     }

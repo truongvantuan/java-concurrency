@@ -2,6 +2,6 @@ package com.company.javaconcurrencylearning.utils;
 
 public interface ICounter {
 
-    long incAndGet(long to);
+    void incTo(long to);
     long get();
 }
